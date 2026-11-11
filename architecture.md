@@ -1,5 +1,17 @@
 # Arham Fintech Architecture Note
 
+## Deployment & Architecture
+
+The React frontend is deployed on Vercel and available at:
+
+- [https://arham-fintech-trade-dashboard.vercel.app/](https://arham-fintech-trade-dashboard.vercel.app/)
+
+The frontend communicates with the Node.js/Express backend API hosted on Render:
+
+- [https://arham-fintech-backend-yf9t.onrender.com](https://arham-fintech-backend-yf9t.onrender.com)
+
+This deployment preserves the same request, background-worker, and Server-Sent Events flow described below: the live dashboard sends API requests to the Render service and receives real-time trade updates over SSE.
+
 ## High-Level Design
 
 The application separates the fast request/response path from the slow simulated market synchronization path:

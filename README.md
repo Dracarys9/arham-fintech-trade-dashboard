@@ -245,6 +245,16 @@ Accept: text/event-stream
 
 The stream emits `connection`, `progress`, and `completed` events. Progress and completion payloads include the current pull status and total trade count.
 
+## Deployment & Architecture
+
+The production React frontend is live on Vercel:
+
+- [Frontend dashboard](https://arham-fintech-trade-dashboard.vercel.app/)
+
+It communicates seamlessly with the Node.js/Express backend API hosted on Render:
+
+- [Backend API](https://arham-fintech-backend-yf9t.onrender.com)
+
 ## Validation
 
 Backend:
@@ -260,7 +270,5 @@ Set-Location client
 npm run build
 npm run lint
 ```
-
-## Architecture
 
 See [architecture.md](./architecture.md) for the non-blocking worker and SSE design note.
